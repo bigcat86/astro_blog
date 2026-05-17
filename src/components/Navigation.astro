@@ -1,0 +1,48 @@
+---
+import Button from "./Button.astro";
+
+const navigationLinks = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about/" },
+  { name: "Blog", href: "/blog/" },
+];
+
+const { activeLink } = Astro.props;
+---
+
+<div class="nav-bar">
+  <h1 class="logo text-indigo-500">My Blog</h1>
+  <div id="main-menu" class="nav-links">
+    {
+      navigationLinks.map((page) => (
+        <Button
+          buttonText={page.name}
+          link={page.href}
+          buttonClass={page.href === activeLink ? "btn-warning" : ""}
+        />
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+  }
+  .logo {
+    width: 50%;
+    font-size: 3rem;
+    font-weight: bold;
+}
+  .nav-links {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    gap: 4rem;
+  }
+</style>

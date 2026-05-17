@@ -1,0 +1,14 @@
+---
+const { buttonText, buttonClass, link } = Astro.props;
+---
+<button class=`btn btn-primary btn-wide ${buttonClass}`>
+    <a href={link}>
+        {buttonText}
+    </a>
+</button>
+
+<style>
+    .btn a {
+        width: 100%;
+    }
+</style>

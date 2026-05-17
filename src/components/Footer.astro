@@ -1,0 +1,41 @@
+---
+import Social from './Social.astro'
+
+const platform = [
+  {
+    platform: "GitHub",
+    username: "bigcat86",
+  },
+  {
+    platform: "LinkedIn",
+    username: "bigcat86",
+  },
+  {
+    platform: "Twitter",
+    username: "bigcat86",
+  },
+];
+---
+
+<footer>
+  <p>
+    Learn more about my projects on
+    <ul>
+      {
+        platform.map((site) => (
+          <li>
+            <Social platform={site.platform} username={site.username} />
+          </li>
+        ))
+      }
+    </ul>
+  </p>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>

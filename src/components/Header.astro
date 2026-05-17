@@ -1,0 +1,19 @@
+---
+import Navigation from './Navigation.astro';
+
+const location = Astro.url.pathname
+---
+<header>
+    <nav>
+        <Navigation activeLink={location} />
+    </nav>
+</header>   
+
+<style>
+  header {
+    margin: 0;
+    background-color: #f8f8f8;
+    padding: 1rem;
+  }
+
+</style>
