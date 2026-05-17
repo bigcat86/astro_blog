@@ -32,10 +32,11 @@ const textCase = "uppercase";
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <style define:vars={{skillColor, fontWeight, textCase}}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
+      body {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }  
       .skill {
         color: var(--skillColor);
         font-weight: var(--fontWeight);
@@ -45,7 +46,7 @@ const textCase = "uppercase";
   </head>
   <body>
     <Header page="About" />
-    <h1>{pageTitle}</h1>
+    <h1 class="text-5xl">{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
 
     <p>

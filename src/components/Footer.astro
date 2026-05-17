@@ -1,5 +1,5 @@
 ---
-import Social from './Social.astro'
+import Social from "./Social.astro";
 
 const platform = [
   {
@@ -17,10 +17,11 @@ const platform = [
 ];
 ---
 
-<footer>
+<footer class="max-w-full h-20 text-white text-xl bg-indigo-500">
   <p>
-    Learn more about my projects on
-    <ul>
+    Learn more about my projects on  
+  </p>
+  <ul class="flex gap-4">
       {
         platform.map((site) => (
           <li>
@@ -28,13 +29,15 @@ const platform = [
           </li>
         ))
       }
-    </ul>
-  </p>
+  </ul>
+
 </footer>
 
 <style>
   footer {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     gap: 1rem;
     margin-top: 2rem;
   }

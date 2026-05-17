@@ -1,7 +1,7 @@
 ---
-import '../styles/global.css';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const pageTitle = "Home Page";
 ---
@@ -14,11 +14,22 @@ const pageTitle = "Home Page";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-  </head> 
+  </head>
   <body>
-    <Header page="Home" />
-    <h1>{pageTitle}</h1>
-	<Footer />
+    <Header />
+    <div class="hero min-h-screen">
+      <div class="hero-content text-center">
+        <div class="max-w-xl">
+          <h1 class="text-8xl font-bold">Hello there</h1>
+          <p class="py-6">
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+            a id nisi.
+          </p>
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
+    </div>
+    <Footer />
   </body>
-  
 </html>
